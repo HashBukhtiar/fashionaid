@@ -24,6 +24,12 @@ const AIChatPage = () => {
     }, 1000);
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleSendMessage();
+    }
+  };
+
   return (
     <div className="chat-page">
       <div className="header">
@@ -45,6 +51,7 @@ const AIChatPage = () => {
             type="text"
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
+            onKeyDown={handleKeyDown}
             placeholder="Ask a question..."
           />
           <button onClick={handleSendMessage}>Send</button>
