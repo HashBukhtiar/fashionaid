@@ -12,6 +12,8 @@
   align-items: center;
   justify-content: center;
   font-family: sans-serif;
+  opacity: 1;
+  transform: none;
 }
 
 @keyframes gradientAnimation {
@@ -32,6 +34,24 @@
   }
 }
 
+@keyframes popInAnimation {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes buttonPopInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .LandingPage-header {
   max-width: 800px;
   padding: 40px;
@@ -40,6 +60,9 @@
   backdrop-filter: blur(15px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
   text-align: center;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: popInAnimation 0.6s ease-out forwards;
 }
 
 .LandingPage-header h1 {
@@ -67,7 +90,17 @@
   transition: background-color 0.3s, transform 0.3s;
   width: auto;
   font-weight: 600;
-  font-family: BlinkMacSystemFont
+  font-family: BlinkMacSystemFont;
+  opacity: 0;
+  animation: buttonPopInAnimation 0.6s ease-out forwards;
+}
+
+.LandingPage-link:nth-child(1) {
+  animation-delay: 0.6s;
+}
+
+.LandingPage-link:nth-child(2) {
+  animation-delay: 0.8s;
 }
 
 .LandingPage-link:hover {
