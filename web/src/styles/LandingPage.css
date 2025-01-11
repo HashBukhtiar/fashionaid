@@ -2,6 +2,7 @@
 
 .LandingPage {
   text-align: center;
+  font-family: 'SF Pro', sans-serif;
   background: linear-gradient(135deg, #f8bbd0, #b3e5fc, #c8e6c9, #ffecb3, #d1c4e9);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
