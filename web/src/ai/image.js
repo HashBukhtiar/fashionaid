@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 function convertImageToInlineData(filePath, mimeType) {
-  const absolutePath = path.join(__dirname, '..', '..', 'images', 'image1.jpg');
+  const absolutePath = path.join(__dirname, '..', 'images', 'image1.jpg');
   const imageBuffer = fs.readFileSync(absolutePath);
   const base64Data = imageBuffer.toString('base64');
   return {
