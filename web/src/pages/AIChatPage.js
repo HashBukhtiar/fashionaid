@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './AIChatPage.css';
+import '../styles/AIChatPage.css';
 
 const AIChatPage = () => {
   const [messages, setMessages] = useState([]);
