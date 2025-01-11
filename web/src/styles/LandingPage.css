@@ -1,44 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro:wght@400;600&display=swap');
+
 .LandingPage {
   text-align: center;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  color: white;
+  background: linear-gradient(135deg, #f5f5f7 0%, #e5e5e7 100%);
+  color: #1d1d1f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'SF Pro', sans-serif;
 }
 
 .LandingPage-header {
   max-width: 800px;
   padding: 20px;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .LandingPage-header h1 {
   font-size: 3em;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .LandingPage-header p {
   font-size: 1.5em;
   margin-bottom: 40px;
+  font-weight: 400;
 }
 
 .LandingPage-link {
-  color: #61dafb;
+  color: #0071e3;
   text-decoration: none;
   font-size: 1.5em;
   padding: 10px 20px;
-  border: 2px solid #61dafb;
+  border: 2px solid #0071e3;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .LandingPage-link:hover {
-  background-color: #61dafb;
-  color: #282c34;
+  background-color: #0071e3;
+  color: #ffffff;
 }
 
 .LandingPage-buttons {
