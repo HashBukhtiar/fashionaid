@@ -30,7 +30,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 16px;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -42,7 +42,7 @@
 }
 
 .wardrobe-button {
-  background-color: #0071e3;
+  background-color: #000000;
   color: white;
   border: none;
   padding: 10px 20px;
