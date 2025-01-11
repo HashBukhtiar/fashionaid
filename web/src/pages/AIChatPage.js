@@ -8,6 +8,7 @@ const AIChatPage = () => {
   const [isChatBoxVisible, setIsChatBoxVisible] = useState(false);
   const navigate = useNavigate();
   const messagesEndRef = useRef(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   // Function to scroll to the bottom
   const scrollToBottom = () => {
@@ -29,13 +30,36 @@ const AIChatPage = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleSendMessage = () => {
-    if (!userInput.trim()) return;
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      // Process the selected file as needed
+      console.log('Selected file:', file);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setSelectedImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
-    const newMessage = { role: 'user', content: userInput, id: Date.now() };
+  const triggerFileSelect = () => {
+    document.getElementById('hiddenFileInput').click();
+  };
+
+  const handleSendMessage = () => {
+    if (!userInput.trim() && !selectedImage) return;
+  
+    const newMessage = {
+      role: 'user',
+      content: userInput,
+      image: selectedImage,
+      id: Date.now(),
+    };
     setMessages((prevMessages) => [...prevMessages, newMessage]);
     setUserInput('');
-
+    setSelectedImage(null);
+  
     // Simulate AI response with a delay
     setTimeout(() => {
       const aiResponse = {
@@ -62,19 +86,24 @@ const AIChatPage = () => {
         </button>
       </div>
       {isChatBoxVisible && (
-        <div className="chat-box animate"> {/* Added animate class */}
+        <div className="chat-box animate">
           <div className="messages">
             {messages.map((msg) => (
               <div
                 key={msg.id}
-                className={`message ${msg.role} enter`} // Added the "enter" class for animation
+                className={`message ${msg.role} enter`}
               >
+                {msg.image && (
+                  <img src={msg.image} alt="Sent" className="sent-image" />
+                )}
                 {msg.content}
               </div>
             ))}
-            {/* Reference to ensure scrolling to the last message */}
             <div ref={messagesEndRef} />
           </div>
+          {selectedImage && (
+            <img src={selectedImage} alt="Selected" className="image-preview" />
+          )}
           <div className="input-container">
             <input
               type="text"
@@ -84,6 +113,14 @@ const AIChatPage = () => {
               placeholder="Ask a question..."
             />
             <button onClick={handleSendMessage}>Send</button>
+            <button onClick={triggerFileSelect}>Select Picture</button>
+            <input
+              type="file"
+              id="hiddenFileInput"
+              style={{ display: 'none' }}
+              accept="image/*"
+              onChange={handleFileChange}
+            />
           </div>
         </div>
       )}

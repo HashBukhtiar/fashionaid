@@ -218,3 +218,16 @@ button:hover {
   }
 }
 
+.image-preview {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.sent-image {
+  width: 50px;
+  height: auto;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: block;
+}
