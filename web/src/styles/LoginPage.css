@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro:wght@400;600&display=swap');
+
+.LoginPage {
+  text-align: center;
+  background: linear-gradient(135deg, #6e2c8e, #1f4b70, #1b7a4e, #b3740a, #9a3a00);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+  color: #1d1d1f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.LoginPage-header {
+  width: 500px; /* Increased from 400px */
+  padding: 30px; /* Increased from 20px */
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: popInAnimation 0.6s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.LoginPage-header img {
+  height: 50px;
+  margin-bottom: 0px;
+  filter: brightness(0) invert(1);
+}
+
+.LoginPage-header h1 {
+  font-size: 2em;
+  margin-bottom: 50px;
+  font-weight: 720;
+  color: #ffffff;
+}
+
+.LoginPage-input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+.LoginPage-button {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 1.25em;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.3s;
+  width: auto;
+  font-weight: 600;
+  font-family: BlinkMacSystemFont;
+  cursor: pointer;
+}
+
+.LoginPage-button:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+@keyframes popInAnimation {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
