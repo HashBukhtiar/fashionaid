@@ -2,7 +2,9 @@
 
 .LandingPage {
   text-align: center;
-  background: linear-gradient(135deg, #f5f5f7 0%, #e5e5e7 100%);
+  background: linear-gradient(135deg, #f8bbd0, #b3e5fc, #c8e6c9, #ffecb3, #d1c4e9);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
   color: #1d1d1f;
   min-height: 100vh;
   display: flex;
@@ -12,11 +14,30 @@
   font-family: 'SF Pro', sans-serif;
 }
 
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .LandingPage-header {
   max-width: 800px;
   padding: 20px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
