@@ -8,7 +8,7 @@ function LandingPage() {
       <header className="LandingPage-header">
         <img src={logo} className="LandingPage-logo" alt="logo" />
         <h1>Welcome to Looksmaxxer</h1>
-        <p>Your journey to looking your best starts here.</p>
+        <p>Style Simplified, Just for You.</p>
         <div className="LandingPage-buttons">
           <a
             className="LandingPage-link"
