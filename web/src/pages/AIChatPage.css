@@ -1,58 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=SF+Pro:wght@400;600&display=swap');
-
-/* Import the SF Pro font */
-/*@font-face {
-  font-family: 'SF Pro';
-  src: url('/fonts/SF-Pro-Display-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents scrolling */
+  height: 100vh; /* Ensures the body is contained within the viewport */
 }
-
-@font-face {
-  font-family: 'SF Pro';
-  src: url('/fonts/SF-Pro-Display-Bold.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}*/
 
 .chat-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f5f5f7;
+  background-color: #000000;
   height: 100vh;
-  /*(font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;*/
-  font-family: Arial;
+  font-family: Arial, sans-serif;
+  padding: 0 px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 16px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100vw; /* Full viewport width */
+  margin: 0; /* Removes any default margin */
+  padding: 15px; /* Keeps padding consistent */
+  background-color: #000000;
+  border-radius: 0; /* Removes rounding if any exists */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header h1 {
   margin: 0;
   font-size: 24px;
-  color: #1d1d1f;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  flex-grow: 1;
 }
 
 .wardrobe-button {
-  background-color: #000000;
-  color: white;
+  background-color: #ffffff;
+  color: #000000;
   border: none;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .wardrobe-button:hover {
-  background-color: #005bb5;
+  background-color: #444444;
 }
 
 .chat-box {
@@ -62,11 +58,19 @@
   width: 100%;
   max-width: 600px;
   height: 80%;
-  background-color: #ffffff;
-  border-radius: 12px;
+  background-color: #000000;
+  border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
   padding: 20px;
+  transition: border outline 0.3s;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.chat-box.animate {
+  /* Trigger slide-in animation */
+  animation: slideInFromBottom 0.6s ease-in-out forwards;
 }
 
 .messages {
@@ -75,15 +79,46 @@
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Adds consistent spacing between messages */
+  gap: 15px; /* Spacing between messages */
+  scrollbar-width: thin;
+  scrollbar-color: #888 #000;
 }
 
 .message {
-  padding: 10px;
-  margin: 5px 0;
+  padding: 10px 15px;
   border-radius: 20px;
   max-width: 70%;
   word-wrap: break-word;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.messages::-webkit-scrollbar {
+  width: 8px; /* Makes the scrollbar thin */
+  background: transparent; /* Transparent background */
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: #888; /* Dark grey scroll thumb */
+  border-radius: 4px; /* Rounded edges */
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Slightly darker on hover */
+}
+
+.messages::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track */
+}
+
+/* Only show scrollbar when scrolling */
+.messages {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.messages:hover::-webkit-scrollbar {
+  display: block; /* Show the scrollbar only on hover */
 }
 
 .message.user {
@@ -95,35 +130,91 @@
 }
 
 .message.ai {
-  background-color: #e5e5ea;
-  color: #1d1d1f;
+  background-color: #2c2c2e;
+  color: #ffffff;
   align-self: flex-start;
   border-bottom-left-radius: 0;
   text-align: left;
 }
+
 .input-container {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 input[type="text"] {
   flex-grow: 1;
-  padding: 10px;
-  border: 1px solid #d1d1d6;
-  border-radius: 8px;
-  margin-right: 10px;
+  padding: 12px 15px;
+  border: 1px solid #444444; /* Dark grey border */
+  border-radius: 20px;
+  font-size: 14px;
+  background-color: #2c2c2e; /* Dark grey background */
+  color: #ffffff; /* White text */
+  caret-color: #0071e3; /* Optional: Blue caret for focus */
+}
+
+input[type="text"]::placeholder {
+  color: #d1d1d6; /* Lighter grey placeholder */
 }
 
 button {
   background-color: #0071e3;
   color: white;
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 20px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 button:hover {
   background-color: #005bb5;
 }
+
+.chat-page {
+  animation: fadeIn 0.5s ease-in;
+  background: linear-gradient(135deg, #6e2c8e, #1f4b70, #1b7a4e, #b3740a, #9a3a00);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Keyframe for sliding in */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Starts slightly below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Ends at its original position */
+  }
+}
+
+/* Apply the animation to new messages */
+.message.enter {
+  animation: slideIn 0.3s ease-in-out; /* Smooth slide-in effect */
+}
+
+/* Keyframe for sliding the chat-box into the page */
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%); /* Start below the viewport */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+}
+
