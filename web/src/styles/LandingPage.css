@@ -3,16 +3,17 @@
 .LandingPage {
   text-align: center;
   font-family: 'SF Pro', sans-serif;
-  background: linear-gradient(135deg, #f8bbd0, #b3e5fc, #c8e6c9, #ffecb3, #d1c4e9);
+  background: linear-gradient(135deg, #6e2c8e, #1f4b70, #1b7a4e, #b3740a, #9a3a00);
   background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
+  animation: gradientAnimation 10s ease infinite;
   color: #1d1d1f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'SF Pro', sans-serif;
+  /* font-family: 'SF Pro', sans-serif; */
+  font-family: BlinkMacSystemFont;
 }
 
 @keyframes gradientAnimation {
@@ -37,22 +38,24 @@
   max-width: 800px;
   padding: 40px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(15px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
 
 .LandingPage-header h1 {
   font-size: 3.5em;
   margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 720;
+  color: #ffffff;
 }
 
 .LandingPage-header p {
   font-size: 1.5em;
   margin-bottom: 40px;
   font-weight: 400;
+  color: #ffffff;
 }
 
 .LandingPage-link {
@@ -60,11 +63,11 @@
   background-color: #005bb5;
   text-decoration: none;
   font-size: 1.5em;
-  padding: 10px 20px;
+  padding: 15px 30px;
   border: none;
   border-radius: 20px;
   transition: background-color 0.3s, transform 0.3s;
-  width: 35%;
+  width: auto;
 }
 
 .LandingPage-link:hover {
