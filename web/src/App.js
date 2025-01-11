@@ -1,16 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
-import logo from './logo.svg';
 import './App.css';
+import AIChatPage from './pages/AIChatPage';
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route exact path="/" element={<LandingPage />} />
-        {/* ...other routes... */}
-      </Routes>
+      <div className="App">
+        <Routes>
+          <Route exact path="/" element={<LandingPage />} />
+          <Route path="/chat" element={<AIChatPage />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
