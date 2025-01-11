@@ -25,7 +25,7 @@ function LoginPage() {
         <h1>Login</h1>
         <input type="text" className="LoginPage-input" placeholder="Username" />
         <input type="password" className="LoginPage-input" placeholder="Password" />
-        <button className="LoginPage-button" onClick={handleLoginClick}>Submit</button>
+        <button className="LoginPage-button" onClick={handleLoginClick} style={{ animationDelay: '0.8s', opacity: 0 }}>Submit</button>
       </header>
     </div>
   );
