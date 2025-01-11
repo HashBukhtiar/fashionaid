@@ -1,102 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro:wght@400;600&display=swap');
+
+/* Import the SF Pro font */
+/*@font-face {
+  font-family: 'SF Pro';
+  src: url('/fonts/SF-Pro-Display-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('/fonts/SF-Pro-Display-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}*/
+
 .chat-page {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-    padding: 10px;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .header h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .wardrobe-button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .wardrobe-button:hover {
-    background-color: #555;
-  }
-  
-  .chat-container {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .messages {
-    flex-grow: 1;
-    overflow-y: auto;
-    margin-bottom: 10px;
-  }
-  
-  .message {
-    margin: 10px 0;
-    padding: 10px 15px;
-    border-radius: 8px;
-    max-width: 70%;
-    line-height: 1.4;
-  }
-  
-  .user-message {
-    align-self: flex-end;
-    background-color: #fda085;
-    color: #fff;
-  }
-  
-  .ai-message {
-    align-self: flex-start;
-    background-color: #f6d365;
-    color: #333;
-  }
-  
-  .input-container {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .input-container input {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .input-container button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .input-container button:hover {
-    background-color: #555;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f7;
+  height: 100vh;
+  /*(font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;*/
+  font-family: Arial;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #1d1d1f;
+}
+
+.wardrobe-button {
+  background-color: #0071e3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.wardrobe-button:hover {
+  background-color: #005bb5;
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  height: 80%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adds consistent spacing between messages */
+}
+
+.message {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 20px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.message.user {
+  background-color: #0071e3;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+  text-align: left;
+}
+
+.message.ai {
+  background-color: #e5e5ea;
+  color: #1d1d1f;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+  text-align: left;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #d1d1d6;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #0071e3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005bb5;
+}

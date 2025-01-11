@@ -32,14 +32,10 @@ const AIChatPage = () => {
           Wardrobe
         </button>
       </div>
-
-      <div className="chat-container">
+      <div className="chat-box">
         <div className="messages">
           {messages.map((msg, index) => (
-            <div
-              key={index}
-              className={`message ${msg.role === 'user' ? 'user-message' : 'ai-message'}`}
-            >
+            <div key={index} className={`message ${msg.role}`}>
               {msg.content}
             </div>
           ))}
@@ -47,9 +43,9 @@ const AIChatPage = () => {
         <div className="input-container">
           <input
             type="text"
-            placeholder="Ask me for outfit advice..."
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
+            placeholder="Ask a question..."
           />
           <button onClick={handleSendMessage}>Send</button>
         </div>
