@@ -12,13 +12,13 @@
     },
     {
       "id": 2,
-      "type": "lower wear",
+      "type": "accessory",
       "hexColor": "#2C3E50",
       "formalityRange": {
         "min": 50,
         "max": 90
       },
-      "imageUrl": "https://example.com/images/pants1.png"
+      "imageUrl": "https://png.pngtree.com/png-clipart/20231005/original/pngtree-gray-beany-hat-toque-caps-png-image_13123606.png"
     },
     {
       "id": 3,
@@ -28,7 +28,7 @@
         "min": 40,
         "max": 100
       },
-      "imageUrl": "https://example.com/images/accessory1.png"
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Baseball_cap.png"
     },
     {
       "id": 4,
@@ -48,7 +48,7 @@
         "min": 60,
         "max": 95
       },
-      "imageUrl": "https://example.com/images/pants2.png"
+      "imageUrl": "https://irvingrivers.com/cdn/shop/products/multicamcargo_1024x1024.png?v=1642783744"
     },
     {
       "id": 6,
@@ -58,7 +58,7 @@
         "min": 10,
         "max": 80
       },
-      "imageUrl": "https://example.com/images/accessory2.png"
+      "imageUrl": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/048b4913-5180-4a01-8b68-0b9f150c7dfb/d57ouef-c67d0270-4253-4acf-a09f-711468c13a78.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA0OGI0OTEzLTUxODAtNGEwMS04YjY4LTBiOWYxNTBjN2RmYlwvZDU3b3VlZi1jNjdkMDI3MC00MjUzLTRhY2YtYTA5Zi03MTE0NjhjMTNhNzgucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Wi_FbRepVFc4VXLlccNzs3wt5wREPISIqNgJPZIjPao"
     },
     {
       "id": 7,
@@ -108,7 +108,7 @@
           "min": 25,
           "max": 60
         },
-        "imageUrl": "https://png.pngtree.com/png-clipart/20230820/ourmid/pngtree-formal-suit-for-passport-png-image_9189045.png"
+        "imageUrl": "https://static.vecteezy.com/system/resources/previews/012/933/025/non_2x/man-tuxedo-suit-free-png.png"
     },
     {
         "id": 12,
@@ -148,8 +148,68 @@
         "min": 55,
         "max": 85
       },
-      "imageUrl": "https://example.com/images/pants3.png"
+      "imageUrl": "https://static.vecteezy.com/system/resources/previews/037/174/417/non_2x/ai-generated-3d-rendering-of-a-man-shorts-on-transparent-background-ai-generated-free-png.png"
     },
+    {
+        "id": 8,
+        "type": "lower wear",
+        "hexColor": "#34495E",
+        "formalityRange": {
+          "min": 55,
+          "max": 85
+        },
+        "imageUrl": "https://static.vecteezy.com/system/resources/previews/036/114/550/non_2x/ai-generated-isolated-pair-of-cargo-pants-clothing-item-on-a-transparent-background-file-format-png.png"
+      },
+      {
+        "id": 8,
+        "type": "lower wear",
+        "hexColor": "#34495E",
+        "formalityRange": {
+          "min": 55,
+          "max": 85
+        },
+        "imageUrl": "https://png.pngtree.com/png-vector/20231209/ourmid/pngtree-mens-khaki-pants-isolated-on-a-white-background-3d-rendering-png-image_11194585.png"
+      },
+      {
+        "id": 8,
+        "type": "lower wear",
+        "hexColor": "#34495E",
+        "formalityRange": {
+          "min": 55,
+          "max": 85
+        },
+        "imageUrl": "https://www.pngall.com/wp-content/uploads/5/Ripped-Men-Jeans-PNG.png"
+      },
+      {
+        "id": 8,
+        "type": "lower wear",
+        "hexColor": "#34495E",
+        "formalityRange": {
+          "min": 55,
+          "max": 85
+        },
+        "imageUrl": "https://png.pngtree.com/png-vector/20240123/ourmid/pngtree-new-green-shorts-png-image_11463296.png"
+      },
+      {
+        "id": 8,
+        "type": "lower wear",
+        "hexColor": "#34495E",
+        "formalityRange": {
+          "min": 55,
+          "max": 85
+        },
+        "imageUrl": "https://png.pngtree.com/png-clipart/20231017/original/pngtree-blue-jeans-png-file-png-image_13328171.png"
+      },
+      {
+        "id": 8,
+        "type": "lower wear",
+        "hexColor": "#34495E",
+        "formalityRange": {
+          "min": 55,
+          "max": 85
+        },
+        "imageUrl": "https://purepng.com/public/uploads/thumbnail//purepng.com-tobys-jeansgarmentlower-bodydenimjeanstobys-1421526364248xzqgh.png"
+      },
     {
       "id": 9,
       "type": "accessory",
@@ -158,7 +218,17 @@
         "min": 35,
         "max": 90
       },
-      "imageUrl": "https://example.com/images/accessory3.png"
-    }
+      "imageUrl": "https://pngimg.com/d/cowboy_hat_PNG56.png"
+    },
+    {
+        "id": 9,
+        "type": "accessory",
+        "hexColor": "#C0392B",
+        "formalityRange": {
+          "min": 35,
+          "max": 90
+        },
+        "imageUrl": "https://www.pngall.com/wp-content/uploads/5/Red-Cap-PNG.png"
+      }
   ]
 }
