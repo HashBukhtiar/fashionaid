@@ -46,6 +46,6 @@ def color_recommendation(color_combo):
 
     return response.candidates[0].content.parts[0].text
 
-color_combination = "shirt: #2b2b2b, pants: #c5b9a9, belt: #222222, shoes: #303030, bag: #000000"
+#color_combination = "shirt: #2b2b2b, pants: #c5b9a9, belt: #222222, shoes: #303030, bag: #000000"
 
-print(color_recommendation(color_combination))
+#print(color_recommendation(color_combination))

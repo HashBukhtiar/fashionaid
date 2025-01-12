@@ -24,3 +24,5 @@ yarn-error.log*
 
 CHOKIDAR_USEPOLLING=true
 WATCHPACK_POLLING=true
+
+__pycache__/

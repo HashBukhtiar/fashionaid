@@ -2,6 +2,7 @@ import base64
 import vertexai
 from vertexai.generative_models import GenerativeModel, SafetySetting, Part
 from sample_images import image1_base64
+from color_rec import color_recommendation
 
 def multiturn_generate_content(base64_string):
     vertexai.init(project="hlthy-421200", location="northamerica-northeast1")
@@ -52,7 +53,7 @@ def multiturn_generate_content(base64_string):
         safety_settings=safety_settings
     )
     print(type(response))
-    return response.candidates[0].content.parts[0].text
+    return color_recommendation(response.candidates[0].content.parts[0].text)
 
 if __name__ == "__main__":
     # For testing purposes
