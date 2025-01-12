@@ -70,16 +70,33 @@ const AIChatPage = () => {
           selectedImage,
         }
       );
-
+  
       const aiResponse = response.data.response;
+      const formattedContent = formatResponseContent(aiResponse.content);
       setMessages((prevMessages) => [
         ...prevMessages,
-        { role: "ai", content: aiResponse.content, id: Date.now() },
+        { role: "ai", content: formattedContent, id: Date.now() },
       ]);
     } catch (error) {
       console.error("Error sending message to the backend:", error);
     }
   };
+  
+  const formatResponseContent = (content) => {
+    return content
+      .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") // Bold formatting
+      .replace(/\*/g, "<br>"); // Replace asterisks with line breaks
+  };
+
+  const renderFormattedContent = (content) => {
+    // Example formatting rules
+    const formattedContent = content.replace(
+      /\*\*(.*?)\*\*/g,
+      (match, text) => `<strong>${text}</strong>`
+    );
+    return <span dangerouslySetInnerHTML={{ __html: formattedContent }} />;
+  };
+  
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
@@ -106,7 +123,7 @@ const AIChatPage = () => {
                 {msg.image && (
                   <img src={msg.image} alt="Sent" className="sent-image" />
                 )}
-                {msg.content}
+                <span dangerouslySetInnerHTML={{ __html: msg.content }} />
               </div>
             ))}
             <div ref={messagesEndRef} />

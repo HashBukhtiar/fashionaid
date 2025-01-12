@@ -15,8 +15,6 @@ def analyze_image(base64_string):
     if missing_padding:
         base64_string += '=' * (4 - missing_padding)
 
-    image_data = base64.b64decode(base64_string)
-
     image1_1 = Part.from_data(
         mime_type="image/jpeg",
         data=base64.b64decode(base64_string),
