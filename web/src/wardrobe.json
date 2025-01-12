@@ -47,7 +47,7 @@
     {
       "id": 5,
       "type": "lower wear",
-      "hexColor": "#3f251b",
+      "hexColor": "#917665",
       "formalityRange": {
         "min": 60,
         "max": 95
@@ -157,7 +157,7 @@
     {
       "id": 15,
       "type": "lower wear",
-      "hexColor": "#34495E",
+      "hexColor": "#9d9b9c",
       "formalityRange": {
         "min": 55,
         "max": 85
@@ -168,7 +168,7 @@
     {
       "id": 16,
       "type": "lower wear",
-      "hexColor": "#34495E",
+      "hexColor": "#737069",
       "formalityRange": {
         "min": 55,
         "max": 85
@@ -179,7 +179,7 @@
     {
       "id": 17,
       "type": "lower wear",
-      "hexColor": "#34495E",
+      "hexColor": "#c6b98e",
       "formalityRange": {
         "min": 55,
         "max": 85
@@ -201,7 +201,7 @@
     {
       "id": 19,
       "type": "lower wear",
-      "hexColor": "#34495E",
+      "hexColor": "#3e855c",
       "formalityRange": {
         "min": 55,
         "max": 85
@@ -212,7 +212,7 @@
     {
       "id": 20,
       "type": "lower wear",
-      "hexColor": "#34495E",
+      "hexColor": "#738cb4",
       "formalityRange": {
         "min": 55,
         "max": 85
@@ -223,7 +223,7 @@
     {
       "id": 21,
       "type": "lower wear",
-      "hexColor": "#34495E",
+      "hexColor": "#425e77",
       "formalityRange": {
         "min": 55,
         "max": 85
