@@ -30,6 +30,17 @@ html, body {
   }
 }
 
+@keyframes popupAnimation {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .WardrobePage-header {
   margin-bottom: 30px;
   position: relative;
@@ -245,9 +256,11 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: popupAnimation 0.3s ease-out;
 }
 
 .WardrobePage-popup-content h3 {
+  margin-top: 0;
   margin-bottom: 20px;
   font-size: 1.5em;
   color: #333;
@@ -263,7 +276,7 @@ html, body {
 }
 
 .WardrobePage-popup-content button {
-  padding: 10px 20px;
+  padding: 10px 30px; /* Make buttons wider */
   margin: 5px;
   border: none;
   border-radius: 5px;
@@ -272,11 +285,12 @@ html, body {
 }
 
 .WardrobePage-popup-content button:first-of-type {
-  background: #4CAF50;
+  background: #000000; /* Black background */
   color: #ffffff;
 }
 
 .WardrobePage-popup-content button:last-of-type {
-  background: #f44336;
-  color: #ffffff;
+  background: #ffffff; /* White background */
+  color: #000000;
+  border: 1px solid #000000; /* Black border */
 }

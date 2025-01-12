@@ -124,6 +124,28 @@
   justify-content: center;
 }
 
+.LandingPage-link-google {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.0);
+  outline: 2px solid #fff;
+  text-decoration: none;
+  font-size: 1.25em;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 250px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  opacity: 0;
+  animation: buttonPopInAnimation 0.6s ease-out forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: -20px;
+}
+
 .LandingPage-logo {
   height: 150px;
   margin-bottom: -20px;
@@ -133,7 +155,9 @@
 .Google-icon {
   display: block;
   margin: 10px auto 0;
-  width: 24px;
-  height: 24px;
-  filter: invert(1) sepia(0) saturate(0) hue-rotate(0deg) brightness(1) contrast(0);
+  width: 22px;
+  height: 22px;
+  filter: invert(1) brightness(1);
+  margin-top: 3px;
+  padding: 0;
 }

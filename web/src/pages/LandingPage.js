@@ -40,7 +40,7 @@ function LandingPage() {
           </a>
         </div>
         <div className="LandingPage-buttons">
-          <a className="LandingPage-link" onClick={handleContinueGoogleClick}>
+          <a className="LandingPage-link-google" onClick={handleContinueGoogleClick}>
             <img src={googleIcon} className="Google-icon" alt="Google icon" />
             Continue with Google
           </a>

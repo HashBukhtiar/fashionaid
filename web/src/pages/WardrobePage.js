@@ -13,7 +13,7 @@ function WardrobePage() {
   const [showAddPopup, setShowAddPopup] = useState(false);
   const [newItemColor, setNewItemColor] = useState('#ffffff');
   const [newItemImageUrl, setNewItemImageUrl] = useState('');
-  const [newItemType, setNewItemType] = useState(''); // State to store the new item type
+  const [newItemType, setNewItemType] = useState('');
   const navigate = useNavigate();
 
   const capitalizeFirstLetter = (string) => {
@@ -170,8 +170,10 @@ function WardrobePage() {
               value={newItemImageUrl}
               onChange={(e) => setNewItemImageUrl(e.target.value)}
             />
-            <button onClick={handleSaveNewItem}>Save</button>
-            <button onClick={() => setShowAddPopup(false)}>Cancel</button>
+            <div style={{ display: 'flex', gap: '10px' }}>
+              <button onClick={handleSaveNewItem}>Save</button>
+              <button onClick={() => setShowAddPopup(false)}>Cancel</button>
+            </div>
           </div>
         </div>
       )}
