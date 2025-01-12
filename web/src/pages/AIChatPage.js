@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/AIChatPage.css";
+import logo from '../images/logo.png';
 
 const AIChatPage = () => {
   const [messages, setMessages] = useState([]);
@@ -107,6 +108,7 @@ const AIChatPage = () => {
   return (
     <div className="chat-page">
       <div className="header">
+        <img src={logo} alt="Logo" className="logo" />
         <h1>AI Stylist Chat</h1>
         <button
           className="wardrobe-button"
