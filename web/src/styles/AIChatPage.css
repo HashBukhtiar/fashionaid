@@ -21,7 +21,7 @@ body {
   align-items: center;
   width: 100vw; /* Full viewport width */
   margin: 0; /* Removes any default margin */
-  padding: 15px; /* Keeps padding consistent */
+  padding: 5px; /* Keeps padding consistent */
   background-color: #000000;
   border-radius: 0; /* Removes rounding if any exists */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -216,5 +216,11 @@ button:hover {
     opacity: 1;
     transform: translateY(0); /* Final position */
   }
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
 }
 
