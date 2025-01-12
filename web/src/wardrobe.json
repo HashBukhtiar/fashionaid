@@ -1,0 +1,65 @@
+{
+    "wardrobe": [
+      {
+        "id": 1,
+        "type": "sweater",
+        "hexColor": "#4A90E2",
+        "formalityRange": {
+          "min": 30,
+          "max": 70
+        },
+        "imageUrl": "https://example.com/images/sweater1.png"
+      },
+      {
+        "id": 2,
+        "type": "pants",
+        "hexColor": "#2C3E50",
+        "formalityRange": {
+          "min": 50,
+          "max": 90
+        },
+        "imageUrl": "https://example.com/images/pants1.png"
+      },
+      {
+        "id": 3,
+        "type": "accessory",
+        "hexColor": "#F39C12",
+        "formalityRange": {
+          "min": 40,
+          "max": 100
+        },
+        "imageUrl": "https://example.com/images/accessory1.png"
+      },
+      {
+        "id": 4,
+        "type": "sweater",
+        "hexColor": "#A8A9AD",
+        "formalityRange": {
+          "min": 20,
+          "max": 50
+        },
+        "imageUrl": "https://example.com/images/sweater2.png"
+      },
+      {
+        "id": 5,
+        "type": "pants",
+        "hexColor": "#8E44AD",
+        "formalityRange": {
+          "min": 60,
+          "max": 95
+        },
+        "imageUrl": "https://example.com/images/pants2.png"
+      },
+      {
+        "id": 6,
+        "type": "accessory",
+        "hexColor": "#16A085",
+        "formalityRange": {
+          "min": 10,
+          "max": 80
+        },
+        "imageUrl": "https://example.com/images/accessory2.png"
+      }
+    ]
+  }
+  
