@@ -3,7 +3,6 @@ import vertexai
 from vertexai.generative_models import GenerativeModel, SafetySetting, Part
 from sample_images import image1_base64
 
-
 def multiturn_generate_content(base64_string):
     vertexai.init(project="hlthy-421200", location="northamerica-northeast1")
 
@@ -47,10 +46,14 @@ def multiturn_generate_content(base64_string):
         system_instruction=[textsi_1]
     )
     chat = model.start_chat()
-    print(chat.send_message(
+    response = chat.send_message(
         [image1_1, textsi_1],
         generation_config=generation_config,
         safety_settings=safety_settings
-    ))
+    )
+    print(type(response))
+    return response.candidates[0].content.parts[0].text
 
-multiturn_generate_content(image1_base64)
+if __name__ == "__main__":
+    # For testing purposes
+    print(multiturn_generate_content(image1_base64))
