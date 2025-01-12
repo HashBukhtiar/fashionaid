@@ -22,15 +22,6 @@ function WardrobePage() {
     setWardrobe(updatedWardrobe);
     setSelectedItems(updatedWardrobe.filter(item => item.active).map(item => item.id));
     localStorage.setItem('wardrobe', JSON.stringify(updatedWardrobe));
-
-    // Update the JSON file on the server
-    fetch('/update-wardrobe', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ wardrobe: updatedWardrobe })
-    }).catch(error => console.error('Error updating wardrobe data:', error));
   };
 
   const renderItems = (type) => {
