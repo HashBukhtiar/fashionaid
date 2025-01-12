@@ -13,7 +13,7 @@ function WardrobePage() {
   const [showAddPopup, setShowAddPopup] = useState(false);
   const [newItemColor, setNewItemColor] = useState('#ffffff');
   const [newItemImageUrl, setNewItemImageUrl] = useState('');
-  const [newItemType, setNewItemType] = useState(''); // State to store the new item type
+  const [newItemType, setNewItemType] = useState('');
   const navigate = useNavigate();
 
   const capitalizeFirstLetter = (string) => {
