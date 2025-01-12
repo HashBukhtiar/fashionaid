@@ -16,6 +16,10 @@ function WardrobePage() {
   const [newItemType, setNewItemType] = useState(''); // State to store the new item type
   const navigate = useNavigate();
 
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
   useEffect(() => {
     const savedWardrobe = JSON.parse(localStorage.getItem('wardrobe')) || wardrobeData.wardrobe;
     setWardrobe(savedWardrobe);
@@ -105,7 +109,7 @@ function WardrobePage() {
               <div className="WardrobePage-select-circle"></div>
               <img src={item.imageUrl} alt={item.type} className="WardrobePage-item-image" />
               <div className="WardrobePage-color" style={{ backgroundColor: item.hexColor }}></div>
-              <p>{item.hexColor}</p>
+              <p>{item.hexColor.toUpperCase()}</p>
               <div className="WardrobePage-menu">
                 <FaEllipsisV onClick={(e) => { e.stopPropagation(); setMenuOpen(menuOpen === item.id ? null : item.id); }} />
                 {menuOpen === item.id && (
@@ -156,7 +160,7 @@ function WardrobePage() {
       {showAddPopup && (
         <div className="WardrobePage-popup">
           <div className="WardrobePage-popup-content">
-            <h3>Add New {newItemType.replace(' wear', ' Wear')}</h3> {/* Update header */}
+            <h3>Add New {capitalizeFirstLetter(newItemType.replace(' wear', ' Wear'))}</h3>
             <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'center' }}>
               <ChromePicker color={newItemColor} onChangeComplete={(color) => setNewItemColor(color.hex)} />
             </div>
