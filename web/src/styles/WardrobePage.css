@@ -145,6 +145,14 @@ html, body {
   top: 10px;
   right: 10px;
   cursor: pointer;
+  transition: background 0.3s;
+  padding: 5px;
+  border-radius: 7px;
+  margin: -5px;
+}
+
+.WardrobePage-menu:hover {
+  background: rgba(155, 155, 155, 0.5);
 }
 
 .WardrobePage-menu-dropdown {
