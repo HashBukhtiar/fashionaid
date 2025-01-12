@@ -1,10 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './AIChatPage.css';
+import React, { useState, useRef, useEffect } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import "./AIChatPage.css";
 
 const AIChatPage = () => {
   const [messages, setMessages] = useState([]);
-  const [userInput, setUserInput] = useState('');
+  const [userInput, setUserInput] = useState("");
   const [isChatBoxVisible, setIsChatBoxVisible] = useState(false);
   const navigate = useNavigate();
   const messagesEndRef = useRef(null);
@@ -13,7 +14,7 @@ const AIChatPage = () => {
   // Function to scroll to the bottom
   const scrollToBottom = () => {
     if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -34,10 +35,10 @@ const AIChatPage = () => {
     const file = event.target.files[0];
     if (file) {
       // Process the selected file as needed
-      console.log('Selected file:', file);
+      console.log("Selected file:", file);
       const reader = new FileReader();
       reader.onloadend = () => {
-        console.log('Base64 image:', typeof(reader.result), reader.result);
+        console.log("Base64 image:", typeof reader.result, reader.result);
         setSelectedImage(reader.result);
       };
       reader.readAsDataURL(file);
@@ -45,12 +46,12 @@ const AIChatPage = () => {
   };
 
   const triggerFileSelect = () => {
-    document.getElementById('hiddenFileInput').click();
+    document.getElementById("hiddenFileInput").click();
   };
 
-  const handleSendMessage = () => {
+  const handleSendMessage = async () => {
     if (!userInput.trim() && !selectedImage) return;
-  
+
     fetch("http://localhost:5000/api/analyze_image", {
       method: "POST",
       headers: {
@@ -58,34 +59,41 @@ const AIChatPage = () => {
       },
       body: JSON.stringify({ base64_string: selectedImage }),
     })
-      .then(response => response.json())
-      .then(data => console.log("Analysis result:", data))
-      .catch(error => console.error("Error:", error));
-    
+      .then((response) => response.json())
+      .then((data) => console.log("Analysis result:", data))
+      .catch((error) => console.error("Error:", error));
 
     const newMessage = {
-      role: 'user',
+      role: "user",
       content: userInput,
       image: selectedImage,
       id: Date.now(),
     };
     setMessages((prevMessages) => [...prevMessages, newMessage]);
-    setUserInput('');
+    setUserInput("");
     setSelectedImage(null);
-  
-    // Simulate AI response with a delay
-    setTimeout(() => {
-      const aiResponse = {
-        role: 'ai',
-        content: `Great question! Based on your wardrobe, I recommend pairing that with a navy blazer.`,
-        id: Date.now(),
-      };
-      setMessages((prevMessages) => [...prevMessages, aiResponse]);
-    }, 1000);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/send-message",
+        {
+          userInput,
+          selectedImage,
+        }
+      );
+
+      const aiResponse = response.data.response;
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { role: "ai", content: aiResponse.content, id: Date.now() },
+      ]);
+    } catch (error) {
+      console.error("Error sending message to the backend:", error);
+    }
   };
 
   const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       handleSendMessage();
     }
   };
@@ -94,7 +102,10 @@ const AIChatPage = () => {
     <div className="chat-page">
       <div className="header">
         <h1>AI Stylist Chat</h1>
-        <button className="wardrobe-button" onClick={() => navigate('/wardrobe')}>
+        <button
+          className="wardrobe-button"
+          onClick={() => navigate("/wardrobe")}
+        >
           Wardrobe
         </button>
       </div>
@@ -102,10 +113,7 @@ const AIChatPage = () => {
         <div className="chat-box animate">
           <div className="messages">
             {messages.map((msg) => (
-              <div
-                key={msg.id}
-                className={`message ${msg.role} enter`}
-              >
+              <div key={msg.id} className={`message ${msg.role} enter`}>
                 {msg.image && (
                   <img src={msg.image} alt="Sent" className="sent-image" />
                 )}
@@ -130,7 +138,7 @@ const AIChatPage = () => {
             <input
               type="file"
               id="hiddenFileInput"
-              style={{ display: 'none' }}
+              style={{ display: "none" }}
               accept="image/*"
               onChange={handleFileChange}
             />

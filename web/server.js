@@ -1,20 +1,26 @@
-const express = require('express');
-const path = require('path');
-
+const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const cors = require("cors");
 
-// Middleware to serve static images
-app.use('/images', express.static(path.join(__dirname, 'images'), {
-  fallthrough: false,
-}));
+// Allow requests from the frontend domain
+app.use(
+  cors({
+    origin: "http://localhost:3000", // frontend URL
+    methods: ["GET", "POST"],
+  })
+);
 
-// 404 handler for /images routes
-app.use('/images', (req, res) => {
-  res.status(404).send('Image not found');
+// Increase the body size limit to allow larger payloads
+app.use(express.json({ limit: "10mb" })); // Increase the limit as needed
+
+// For handling multipart data (like images), you can use a package like `multer`
+app.use(express.urlencoded({ extended: true, limit: "10mb" }));
+
+app.post("/api/send-message", (req, res) => {
+  console.log("Message received:", req.body);
+  res.sendStatus(200); // Respond after processing
 });
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Image server running at http://localhost:${PORT}/images`);
+app.listen(5000, () => {
+  console.log("Backend running on http://localhost:5000");
 });
