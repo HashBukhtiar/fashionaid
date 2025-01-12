@@ -71,77 +71,77 @@
       "imageUrl": "https://static.vecteezy.com/system/resources/thumbnails/035/438/705/small/ai-generated-black-hoodie-isolated-on-transparent-background-free-png.png"
     },
     {
-        "id": 12,
-        "type": "upper wear",
-        "hexColor": "#FF5733",
-        "formalityRange": {
-          "min": 25,
-          "max": 60
-        },
-        "imageUrl": "https://www.pngarts.com/files/11/Hoodie-PNG-High-Quality-Image.png"
-    },
-    {
-        "id": 12,
-        "type": "upper wear",
-        "hexColor": "#FF5733",
-        "formalityRange": {
-          "min": 25,
-          "max": 60
-        },
-        "imageUrl": "https://pngimg.com/d/hoodie_PNG23.png"
-    },
-    {
-        "id": 12,
-        "type": "upper wear",
-        "hexColor": "#FF5733",
-        "formalityRange": {
-          "min": 25,
-          "max": 60
-        },
-        "imageUrl": "https://www.createashirt.com/image/catalog/products/2200/Back/Ultra-Cotton-Tank-Top-2200_Orange.png"
-    },
-    {
-        "id": 12,
-        "type": "upper wear",
-        "hexColor": "#FF5733",
-        "formalityRange": {
-          "min": 25,
-          "max": 60
-        },
-        "imageUrl": "https://static.vecteezy.com/system/resources/previews/012/933/025/non_2x/man-tuxedo-suit-free-png.png"
-    },
-    {
-        "id": 12,
-        "type": "upper wear",
-        "hexColor": "#FF5733",
-        "formalityRange": {
-          "min": 25,
-          "max": 60
-        },
-        "imageUrl": "https://pics.clipartpng.com/Sky_Blue_T_Shirt_PNG_Clip_Art-3103.png"
-    },
-    {
-        "id": 12,
-        "type": "upper wear",
-        "hexColor": "#FF5733",
-        "formalityRange": {
-          "min": 25,
-          "max": 60
-        },
-        "imageUrl": "https://purepng.com/public/uploads/large/purepng.com-t-shirtt-shirtfabrict-shapegramnets-1421526429337ircsl.png"
-    },
-    {
-        "id": 12,
-        "type": "upper wear",
-        "hexColor": "#FF5733",
-        "formalityRange": {
-          "min": 25,
-          "max": 60
-        },
-        "imageUrl": "https://static.vecteezy.com/system/resources/thumbnails/041/290/593/small/ai-generated-short-sleeves-black-tshirt-isolated-on-a-transparent-background-free-png.png"
-    },
-    {
       "id": 8,
+      "type": "upper wear",
+      "hexColor": "#FF5733",
+      "formalityRange": {
+        "min": 25,
+        "max": 60
+      },
+      "imageUrl": "https://www.pngarts.com/files/11/Hoodie-PNG-High-Quality-Image.png"
+    },
+    {
+      "id": 9,
+      "type": "upper wear",
+      "hexColor": "#FF5733",
+      "formalityRange": {
+        "min": 25,
+        "max": 60
+      },
+      "imageUrl": "https://pngimg.com/d/hoodie_PNG23.png"
+    },
+    {
+      "id": 10,
+      "type": "upper wear",
+      "hexColor": "#FF5733",
+      "formalityRange": {
+        "min": 25,
+        "max": 60
+      },
+      "imageUrl": "https://www.createashirt.com/image/catalog/products/2200/Back/Ultra-Cotton-Tank-Top-2200_Orange.png"
+    },
+    {
+      "id": 11,
+      "type": "upper wear",
+      "hexColor": "#FF5733",
+      "formalityRange": {
+        "min": 25,
+        "max": 60
+      },
+      "imageUrl": "https://static.vecteezy.com/system/resources/previews/012/933/025/non_2x/man-tuxedo-suit-free-png.png"
+    },
+    {
+      "id": 12,
+      "type": "upper wear",
+      "hexColor": "#FF5733",
+      "formalityRange": {
+        "min": 25,
+        "max": 60
+      },
+      "imageUrl": "https://pics.clipartpng.com/Sky_Blue_T_Shirt_PNG_Clip_Art-3103.png"
+    },
+    {
+      "id": 13,
+      "type": "upper wear",
+      "hexColor": "#FF5733",
+      "formalityRange": {
+        "min": 25,
+        "max": 60
+      },
+      "imageUrl": "https://purepng.com/public/uploads/large/purepng.com-t-shirtt-shirtfabrict-shapegramnets-1421526429337ircsl.png"
+    },
+    {
+      "id": 14,
+      "type": "upper wear",
+      "hexColor": "#FF5733",
+      "formalityRange": {
+        "min": 25,
+        "max": 60
+      },
+      "imageUrl": "https://static.vecteezy.com/system/resources/thumbnails/041/290/593/small/ai-generated-short-sleeves-black-tshirt-isolated-on-a-transparent-background-free-png.png"
+    },
+    {
+      "id": 15,
       "type": "lower wear",
       "hexColor": "#34495E",
       "formalityRange": {
@@ -151,67 +151,67 @@
       "imageUrl": "https://static.vecteezy.com/system/resources/previews/037/174/417/non_2x/ai-generated-3d-rendering-of-a-man-shorts-on-transparent-background-ai-generated-free-png.png"
     },
     {
-        "id": 8,
-        "type": "lower wear",
-        "hexColor": "#34495E",
-        "formalityRange": {
-          "min": 55,
-          "max": 85
-        },
-        "imageUrl": "https://static.vecteezy.com/system/resources/previews/036/114/550/non_2x/ai-generated-isolated-pair-of-cargo-pants-clothing-item-on-a-transparent-background-file-format-png.png"
+      "id": 16,
+      "type": "lower wear",
+      "hexColor": "#34495E",
+      "formalityRange": {
+        "min": 55,
+        "max": 85
       },
-      {
-        "id": 8,
-        "type": "lower wear",
-        "hexColor": "#34495E",
-        "formalityRange": {
-          "min": 55,
-          "max": 85
-        },
-        "imageUrl": "https://png.pngtree.com/png-vector/20231209/ourmid/pngtree-mens-khaki-pants-isolated-on-a-white-background-3d-rendering-png-image_11194585.png"
-      },
-      {
-        "id": 8,
-        "type": "lower wear",
-        "hexColor": "#34495E",
-        "formalityRange": {
-          "min": 55,
-          "max": 85
-        },
-        "imageUrl": "https://www.pngall.com/wp-content/uploads/5/Ripped-Men-Jeans-PNG.png"
-      },
-      {
-        "id": 8,
-        "type": "lower wear",
-        "hexColor": "#34495E",
-        "formalityRange": {
-          "min": 55,
-          "max": 85
-        },
-        "imageUrl": "https://png.pngtree.com/png-vector/20240123/ourmid/pngtree-new-green-shorts-png-image_11463296.png"
-      },
-      {
-        "id": 8,
-        "type": "lower wear",
-        "hexColor": "#34495E",
-        "formalityRange": {
-          "min": 55,
-          "max": 85
-        },
-        "imageUrl": "https://freepngimg.com/save/15182-jeans-png-image/840x1036"
-      },
-      {
-        "id": 8,
-        "type": "lower wear",
-        "hexColor": "#34495E",
-        "formalityRange": {
-          "min": 55,
-          "max": 85
-        },
-        "imageUrl": "https://i.pinimg.com/originals/56/fd/17/56fd178072129c8eaf5dc1460d587d7a.png"
-      },
+      "imageUrl": "https://static.vecteezy.com/system/resources/previews/036/114/550/non_2x/ai-generated-isolated-pair-of-cargo-pants-clothing-item-on-a-transparent-background-file-format-png.png"
+    },
     {
-      "id": 9,
+      "id": 17,
+      "type": "lower wear",
+      "hexColor": "#34495E",
+      "formalityRange": {
+        "min": 55,
+        "max": 85
+      },
+      "imageUrl": "https://png.pngtree.com/png-vector/20231209/ourmid/pngtree-mens-khaki-pants-isolated-on-a-white-background-3d-rendering-png-image_11194585.png"
+    },
+    {
+      "id": 18,
+      "type": "lower wear",
+      "hexColor": "#34495E",
+      "formalityRange": {
+        "min": 55,
+        "max": 85
+      },
+      "imageUrl": "https://www.pngall.com/wp-content/uploads/5/Ripped-Men-Jeans-PNG.png"
+    },
+    {
+      "id": 19,
+      "type": "lower wear",
+      "hexColor": "#34495E",
+      "formalityRange": {
+        "min": 55,
+        "max": 85
+      },
+      "imageUrl": "https://png.pngtree.com/png-vector/20240123/ourmid/pngtree-new-green-shorts-png-image_11463296.png"
+    },
+    {
+      "id": 20,
+      "type": "lower wear",
+      "hexColor": "#34495E",
+      "formalityRange": {
+        "min": 55,
+        "max": 85
+      },
+      "imageUrl": "https://freepngimg.com/save/15182-jeans-png-image/840x1036"
+    },
+    {
+      "id": 21,
+      "type": "lower wear",
+      "hexColor": "#34495E",
+      "formalityRange": {
+        "min": 55,
+        "max": 85
+      },
+      "imageUrl": "https://i.pinimg.com/originals/56/fd/17/56fd178072129c8eaf5dc1460d587d7a.png"
+    },
+    {
+      "id": 22,
       "type": "accessory",
       "hexColor": "#C0392B",
       "formalityRange": {
@@ -221,14 +221,14 @@
       "imageUrl": "https://pngimg.com/d/cowboy_hat_PNG56.png"
     },
     {
-        "id": 9,
-        "type": "accessory",
-        "hexColor": "#C0392B",
-        "formalityRange": {
-          "min": 35,
-          "max": 90
-        },
-        "imageUrl": "https://www.pngall.com/wp-content/uploads/5/Red-Cap-PNG.png"
-      }
+      "id": 23,
+      "type": "accessory",
+      "hexColor": "#C0392B",
+      "formalityRange": {
+        "min": 35,
+        "max": 90
+      },
+      "imageUrl": "https://www.pngall.com/wp-content/uploads/5/Red-Cap-PNG.png"
+    }
   ]
 }
