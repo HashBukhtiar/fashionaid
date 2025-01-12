@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/AIChatPage.css";
 import logo from '../images/logo.png';
+import paperclip from '../images/paperclip.png';
 
 const AIChatPage = () => {
   const [messages, setMessages] = useState([]);
@@ -142,7 +143,9 @@ const AIChatPage = () => {
               placeholder="Ask a question..."
             />
             <button onClick={handleSendMessage}>Send</button>
-            <button onClick={triggerFileSelect}>Select Picture</button>
+            <button onClick={triggerFileSelect}>
+              <img src={paperclip} alt="Upload" className="paperclip-icon" />
+            </button>
             <input
               type="file"
               id="hiddenFileInput"

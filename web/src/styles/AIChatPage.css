@@ -236,3 +236,9 @@ button:hover {
   height: auto;
   margin-right: 10px;
 }
+
+.paperclip-icon {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
