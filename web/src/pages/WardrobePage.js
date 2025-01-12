@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaHome, FaComments, FaEllipsisV, FaTrash } from 'react-icons/fa';
+import { IoAddCircleOutline } from 'react-icons/io5'; // Correct import for IoAddCircleOutline
 import { useNavigate } from 'react-router-dom';
 import '../styles/WardrobePage.css';
 import wardrobeData from '../wardrobe.json';
@@ -73,7 +74,7 @@ function WardrobePage() {
             </div>
           ))}
         <div className="WardrobePage-item WardrobePage-add-item" onClick={() => alert('Add new item')}>
-          <div className="WardrobePage-add-icon">+</div>
+          <IoAddCircleOutline className="WardrobePage-add-icon" />
           <div className="WardrobePage-add-text">Add wardrobe</div>
         </div>
       </>
