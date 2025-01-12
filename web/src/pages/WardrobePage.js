@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/WardrobePage.css';
+import wardrobeData from '../wardrobe.json';
 
 function WardrobePage() {
+  const [wardrobe, setWardrobe] = useState([]);
+
+  useEffect(() => {
+    setWardrobe(wardrobeData.wardrobe);
+  }, []);
+
+  const renderItems = (type) => {
+    return wardrobe
+      .filter(item => item.type === type)
+      .map(item => (
+        <div key={item.id} className="WardrobePage-item">
+          <img src={item.imageUrl} alt={item.type} className="WardrobePage-item-image" />
+          <p>{item.type.charAt(0).toUpperCase() + item.type.slice(1)}</p>
+        </div>
+      ));
+  };
+
   return (
     <div className="WardrobePage">
       <header className="WardrobePage-header">
@@ -10,25 +28,19 @@ function WardrobePage() {
       <section className="WardrobePage-section">
         <h2>Accessories</h2>
         <div className="WardrobePage-items">
-          {/* Add accessory items here */}
-          <div className="WardrobePage-item">Watch</div>
-          <div className="WardrobePage-item">Hat</div>
+          {renderItems('accessory')}
         </div>
       </section>
       <section className="WardrobePage-section">
         <h2>Sweaters</h2>
         <div className="WardrobePage-items">
-          {/* Add sweater items here */}
-          <div className="WardrobePage-item">Red Sweater</div>
-          <div className="WardrobePage-item">Blue Sweater</div>
+          {renderItems('sweater')}
         </div>
       </section>
       <section className="WardrobePage-section">
         <h2>Pants</h2>
         <div className="WardrobePage-items">
-          {/* Add pants items here */}
-          <div className="WardrobePage-item">Jeans</div>
-          <div className="WardrobePage-item">Chinos</div>
+          {renderItems('pants')}
         </div>
       </section>
     </div>
