@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { FaHome, FaComments, FaEllipsisV, FaTrash } from 'react-icons/fa';
-import { IoAddCircleOutline } from 'react-icons/io5'; // Correct import for IoAddCircleOutline
+import { IoAddCircleOutline } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
+import { ChromePicker } from 'react-color';
 import '../styles/WardrobePage.css';
 import wardrobeData from '../wardrobe.json';
 
@@ -9,6 +10,9 @@ function WardrobePage() {
   const [wardrobe, setWardrobe] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
   const [menuOpen, setMenuOpen] = useState(null);
+  const [showAddPopup, setShowAddPopup] = useState(false);
+  const [newItemColor, setNewItemColor] = useState('#ffffff');
+  const [newItemImageUrl, setNewItemImageUrl] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -44,6 +48,26 @@ function WardrobePage() {
     setWardrobe(updatedWardrobe);
     setSelectedItems(updatedWardrobe.filter(item => item.active).map(item => item.id));
     localStorage.setItem('wardrobe', JSON.stringify(updatedWardrobe));
+  };
+
+  const handleAddItem = () => {
+    setShowAddPopup(true);
+  };
+
+  const handleSaveNewItem = () => {
+    const newItem = {
+      id: wardrobe.length + 1,
+      type: 'upper wear', // Default type, can be changed as needed
+      hexColor: newItemColor,
+      formalityRange: { min: 0, max: 100 }, // Default formality range, can be changed as needed
+      imageUrl: newItemImageUrl,
+      active: true, // Ensure the item is active by default
+    };
+    const updatedWardrobe = [...wardrobe, newItem];
+    setWardrobe(updatedWardrobe);
+    setSelectedItems(updatedWardrobe.filter(item => item.active).map(item => item.id));
+    localStorage.setItem('wardrobe', JSON.stringify(updatedWardrobe));
+    setShowAddPopup(false);
   };
 
   const renderItems = (type) => {
@@ -86,7 +110,7 @@ function WardrobePage() {
               </div>
             </div>
           ))}
-        <div className="WardrobePage-item WardrobePage-add-item" onClick={() => alert('Add new item')}>
+        <div className="WardrobePage-item WardrobePage-add-item" onClick={handleAddItem}>
           <IoAddCircleOutline className="WardrobePage-add-icon" />
           <div className="WardrobePage-add-text">{getAddText(type)}</div>
         </div>
@@ -121,6 +145,24 @@ function WardrobePage() {
           {renderItems('lower wear')}
         </div>
       </section>
+      {showAddPopup && (
+        <div className="WardrobePage-popup">
+          <div className="WardrobePage-popup-content">
+            <h3>Add New Item</h3>
+            <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'center' }}>
+              <ChromePicker color={newItemColor} onChangeComplete={(color) => setNewItemColor(color.hex)} />
+            </div>
+            <input
+              type="text"
+              placeholder="Image URL (optional)"
+              value={newItemImageUrl}
+              onChange={(e) => setNewItemImageUrl(e.target.value)}
+            />
+            <button onClick={handleSaveNewItem}>Save</button>
+            <button onClick={() => setShowAddPopup(false)}>Cancel</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
