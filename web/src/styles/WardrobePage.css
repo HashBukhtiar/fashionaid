@@ -32,11 +32,35 @@ html, body {
 
 .WardrobePage-header {
   margin-bottom: 30px;
+  position: relative;
+  width: 100%;
 }
 
 .WardrobePage-header h1 {
   font-size: 2.5em;
   color: #ffffff;
+}
+
+.WardrobePage-icons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.WardrobePage-icon {
+  color: #ffffff;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: background 0.3s;
+  padding: 10px;
+  border-radius: 10px;
+  margin: -5px;
+}
+
+.WardrobePage-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .WardrobePage-section {

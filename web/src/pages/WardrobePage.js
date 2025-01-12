@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { FaHome, FaComments } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import '../styles/WardrobePage.css';
 import wardrobeData from '../wardrobe.json';
 
 function WardrobePage() {
   const [wardrobe, setWardrobe] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setWardrobe(wardrobeData.wardrobe);
@@ -24,6 +27,10 @@ function WardrobePage() {
   return (
     <div className="WardrobePage">
       <header className="WardrobePage-header">
+        <div className="WardrobePage-icons">
+          <FaHome className="WardrobePage-icon" onClick={() => navigate('/')} />
+          <FaComments className="WardrobePage-icon" onClick={() => navigate('/chat')} />
+        </div>
         <h1>My Wardrobe</h1>
       </header>
       <section className="WardrobePage-section">
