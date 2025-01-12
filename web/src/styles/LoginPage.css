@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 @keyframes gradientAnimation {
@@ -63,7 +63,7 @@
   border-radius: 10px;
   font-size: 1em;
   color: #ffffff;
-  font-family: BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   transition: background-color 0.3s, outline 0.3s;
 }
 
@@ -81,7 +81,7 @@
   border-radius: 30px;
   transition: background-color 1.0s ease, transform 1.0s ease;
   width: auto;
-  font-family: BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   cursor: pointer;
   margin-top: 20px;
   animation: buttonAnimation 0.8s ease-in-out forwards;
