@@ -76,8 +76,9 @@ html, body {
 }
 
 .WardrobePage-item-image {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100px;
+  max-width: 100%;
   border-radius: 10px;
   margin-bottom: 10px;
 }
