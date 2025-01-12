@@ -1,11 +1,21 @@
 import base64
 import vertexai
 from vertexai.generative_models import GenerativeModel, SafetySetting, Part
-from sample_images import image1_base64
+from sample_images import *
 from color_rec import color_recommendation
 
 def analyze_image(base64_string):
     vertexai.init(project="hlthy-421200", location="northamerica-northeast1")
+
+    if base64_string.startswith('data:image/jpeg;base64,'):
+        base64_string = base64_string[len('data:image/jpeg;base64,'):]
+
+    # Add padding if necessary
+    missing_padding = len(base64_string) % 4
+    if missing_padding:
+        base64_string += '=' * (4 - missing_padding)
+
+    image_data = base64.b64decode(base64_string)
 
     image1_1 = Part.from_data(
         mime_type="image/jpeg",
@@ -57,4 +67,4 @@ def analyze_image(base64_string):
 
 if __name__ == "__main__":
     # For testing purposes
-    print(analyze_image(image1_base64))
+    print(analyze_image(image2_base64))

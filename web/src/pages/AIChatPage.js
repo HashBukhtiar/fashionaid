@@ -51,18 +51,7 @@ const AIChatPage = () => {
 
   const handleSendMessage = async () => {
     if (!userInput.trim() && !selectedImage) return;
-
-    fetch("http://localhost:5000/api/analyze_image", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ base64_string: selectedImage }),
-    })
-      .then((response) => response.json())
-      .then((data) => console.log("Analysis result:", data))
-      .catch((error) => console.error("Error:", error));
-
+  
     const newMessage = {
       role: "user",
       content: userInput,
@@ -72,10 +61,10 @@ const AIChatPage = () => {
     setMessages((prevMessages) => [...prevMessages, newMessage]);
     setUserInput("");
     setSelectedImage(null);
-
+  
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/send-message",
+        "http://localhost:5000/api/send_message",
         {
           userInput,
           selectedImage,
