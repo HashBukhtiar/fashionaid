@@ -47,6 +47,19 @@ function WardrobePage() {
   };
 
   const renderItems = (type) => {
+    const getAddText = (type) => {
+      switch (type) {
+        case 'accessory':
+          return 'Add Accessories';
+        case 'upper wear':
+          return 'Add Upper Wear';
+        case 'lower wear':
+          return 'Add Lower Wear';
+        default:
+          return 'Add Item';
+      }
+    };
+
     return (
       <>
         {wardrobe
@@ -75,7 +88,7 @@ function WardrobePage() {
           ))}
         <div className="WardrobePage-item WardrobePage-add-item" onClick={() => alert('Add new item')}>
           <IoAddCircleOutline className="WardrobePage-add-icon" />
-          <div className="WardrobePage-add-text">Add wardrobe</div>
+          <div className="WardrobePage-add-text">{getAddText(type)}</div>
         </div>
       </>
     );
