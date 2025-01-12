@@ -11,7 +11,7 @@ function WardrobePage() {
 
   useEffect(() => {
     setWardrobe(wardrobeData.wardrobe);
-    setSelectedItems(wardrobeData.wardrobe.map(item => item.id));
+    // setSelectedItems(wardrobeData.wardrobe.map(item => item.id));
   }, []);
 
   const toggleSelectItem = (id) => {
