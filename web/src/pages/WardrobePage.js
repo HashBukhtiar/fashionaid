@@ -13,6 +13,7 @@ function WardrobePage() {
   const [showAddPopup, setShowAddPopup] = useState(false);
   const [newItemColor, setNewItemColor] = useState('#ffffff');
   const [newItemImageUrl, setNewItemImageUrl] = useState('');
+  const [newItemType, setNewItemType] = useState(''); // State to store the new item type
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -50,17 +51,24 @@ function WardrobePage() {
     localStorage.setItem('wardrobe', JSON.stringify(updatedWardrobe));
   };
 
-  const handleAddItem = () => {
+  const handleAddItem = (type) => {
+    setNewItemType(type);
     setShowAddPopup(true);
   };
 
   const handleSaveNewItem = () => {
+    const defaultImages = {
+      'accessory': 'https://www.pngkey.com/png/full/310-3103961_mystery-hat-hutchla-pokmon-4ever.png',
+      'upper wear': 'https://whistleandflute.com/cdn/shop/products/Whistle_Flute_MysteryPack_T-Shirts_f063d861-7db8-400e-abe7-23d73ef5881e_grande.png?v=1597096385',
+      'lower wear': 'https://kikillopieces.com/cdn/shop/files/all-over-print-unisex-wide-leg-pants-white-front-659c832a62a65_300x.png?v=1704756070'
+    };
+
     const newItem = {
       id: wardrobe.length + 1,
-      type: 'upper wear', // Default type, can be changed as needed
+      type: newItemType, // Use the new item type
       hexColor: newItemColor,
       formalityRange: { min: 0, max: 100 }, // Default formality range, can be changed as needed
-      imageUrl: newItemImageUrl,
+      imageUrl: newItemImageUrl || defaultImages[newItemType], // Use default image if URL is not provided
       active: true, // Ensure the item is active by default
     };
     const updatedWardrobe = [...wardrobe, newItem];
@@ -110,7 +118,7 @@ function WardrobePage() {
               </div>
             </div>
           ))}
-        <div className="WardrobePage-item WardrobePage-add-item" onClick={handleAddItem}>
+        <div className="WardrobePage-item WardrobePage-add-item" onClick={() => handleAddItem(type)}>
           <IoAddCircleOutline className="WardrobePage-add-icon" />
           <div className="WardrobePage-add-text">{getAddText(type)}</div>
         </div>
@@ -148,7 +156,7 @@ function WardrobePage() {
       {showAddPopup && (
         <div className="WardrobePage-popup">
           <div className="WardrobePage-popup-content">
-            <h3>Add New Item</h3>
+            <h3>Add New {newItemType.replace(' wear', ' Wear')}</h3> {/* Update header */}
             <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'center' }}>
               <ChromePicker color={newItemColor} onChangeComplete={(color) => setNewItemColor(color.hex)} />
             </div>
