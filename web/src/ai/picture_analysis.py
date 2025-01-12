@@ -4,7 +4,7 @@ from vertexai.generative_models import GenerativeModel, SafetySetting, Part
 from sample_images import image1_base64
 from color_rec import color_recommendation
 
-def multiturn_generate_content(base64_string):
+def analyze_image(base64_string):
     vertexai.init(project="hlthy-421200", location="northamerica-northeast1")
 
     image1_1 = Part.from_data(
@@ -57,4 +57,4 @@ def multiturn_generate_content(base64_string):
 
 if __name__ == "__main__":
     # For testing purposes
-    print(multiturn_generate_content(image1_base64))
+    print(analyze_image(image1_base64))
