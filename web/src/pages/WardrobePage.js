@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FaHome, FaComments } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import '../styles/WardrobePage.css';
-import wardrobeData from '../wardrobe.json';
+import wardrobeData from '../../public/wardrobe.json';
 
 function WardrobePage() {
   const [wardrobe, setWardrobe] = useState([]);
