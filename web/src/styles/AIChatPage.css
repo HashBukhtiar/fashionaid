@@ -21,7 +21,7 @@ body {
   align-items: center;
   width: 100vw; /* Full viewport width */
   margin: 0; /* Removes any default margin */
-  padding: 15px; /* Keeps padding consistent */
+  padding: 5px; /* Keeps padding consistent */
   background-color: #000000;
   border-radius: 0; /* Removes rounding if any exists */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -37,14 +37,18 @@ body {
 }
 
 .wardrobe-button {
-  background-color: #ffffff;
-  color: #000000;
+  background: linear-gradient(135deg, #6e2c8e, #1f4b70, #1b7a4e, #b3740a, #9a3a00);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
   border: none;
+  color: white;
   padding: 10px 20px;
-  font-size: 14px;
-  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  border-radius: 5px;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+  margin-right: 5px;
 }
 
 .wardrobe-button:hover {
@@ -218,3 +222,27 @@ button:hover {
   }
 }
 
+.image-preview {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.sent-image {
+  width: 50px;
+  height: auto;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: block;
+}
+.logo {
+  width: 50px;
+  height: auto;
+  margin-left: 8px;
+}
+
+.paperclip-icon {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}

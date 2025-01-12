@@ -3,7 +3,7 @@
     {
       "id": 1,
       "type": "upper wear",
-      "hexColor": "#4A90E2",
+      "hexColor": "#1f1f1e",
       "formalityRange": {
         "min": 30,
         "max": 70
@@ -14,7 +14,7 @@
     {
       "id": 2,
       "type": "accessory",
-      "hexColor": "#2C3E50",
+      "hexColor": "#666564",
       "formalityRange": {
         "min": 50,
         "max": 90
@@ -25,7 +25,7 @@
     {
       "id": 3,
       "type": "accessory",
-      "hexColor": "#F39C12",
+      "hexColor": "#404356",
       "formalityRange": {
         "min": 40,
         "max": 100
@@ -36,7 +36,7 @@
     {
       "id": 4,
       "type": "upper wear",
-      "hexColor": "#A8A9AD",
+      "hexColor": "#1b78b8",
       "formalityRange": {
         "min": 20,
         "max": 50
@@ -47,7 +47,7 @@
     {
       "id": 5,
       "type": "lower wear",
-      "hexColor": "#8E44AD",
+      "hexColor": "#917665",
       "formalityRange": {
         "min": 60,
         "max": 95
@@ -58,7 +58,7 @@
     {
       "id": 6,
       "type": "accessory",
-      "hexColor": "#16A085",
+      "hexColor": "#11100e",
       "formalityRange": {
         "min": 10,
         "max": 80
@@ -69,7 +69,7 @@
     {
       "id": 7,
       "type": "upper wear",
-      "hexColor": "#FF5733",
+      "hexColor": "#212120",
       "formalityRange": {
         "min": 25,
         "max": 60
@@ -80,7 +80,7 @@
     {
       "id": 8,
       "type": "upper wear",
-      "hexColor": "#FF5733",
+      "hexColor": "#b92c36",
       "formalityRange": {
         "min": 25,
         "max": 60
@@ -91,7 +91,7 @@
     {
       "id": 9,
       "type": "upper wear",
-      "hexColor": "#FF5733",
+      "hexColor": "#f8c4db",
       "formalityRange": {
         "min": 25,
         "max": 60
@@ -102,7 +102,7 @@
     {
       "id": 10,
       "type": "upper wear",
-      "hexColor": "#FF5733",
+      "hexColor": "#d9481f",
       "formalityRange": {
         "min": 25,
         "max": 60
@@ -113,7 +113,7 @@
     {
       "id": 11,
       "type": "upper wear",
-      "hexColor": "#FF5733",
+      "hexColor": "#1a1a1a",
       "formalityRange": {
         "min": 25,
         "max": 60
@@ -124,7 +124,7 @@
     {
       "id": 12,
       "type": "upper wear",
-      "hexColor": "#FF5733",
+      "hexColor": "#29c6d7",
       "formalityRange": {
         "min": 25,
         "max": 60
@@ -135,7 +135,7 @@
     {
       "id": 13,
       "type": "upper wear",
-      "hexColor": "#FF5733",
+      "hexColor": "#abafbc",
       "formalityRange": {
         "min": 25,
         "max": 60
@@ -146,7 +146,7 @@
     {
       "id": 14,
       "type": "upper wear",
-      "hexColor": "#FF5733",
+      "hexColor": "#171717",
       "formalityRange": {
         "min": 25,
         "max": 60
@@ -157,7 +157,7 @@
     {
       "id": 15,
       "type": "lower wear",
-      "hexColor": "#34495E",
+      "hexColor": "#9d9b9c",
       "formalityRange": {
         "min": 55,
         "max": 85
@@ -168,7 +168,7 @@
     {
       "id": 16,
       "type": "lower wear",
-      "hexColor": "#34495E",
+      "hexColor": "#737069",
       "formalityRange": {
         "min": 55,
         "max": 85
@@ -179,7 +179,7 @@
     {
       "id": 17,
       "type": "lower wear",
-      "hexColor": "#34495E",
+      "hexColor": "#c6b98e",
       "formalityRange": {
         "min": 55,
         "max": 85
@@ -201,7 +201,7 @@
     {
       "id": 19,
       "type": "lower wear",
-      "hexColor": "#34495E",
+      "hexColor": "#3e855c",
       "formalityRange": {
         "min": 55,
         "max": 85
@@ -212,7 +212,7 @@
     {
       "id": 20,
       "type": "lower wear",
-      "hexColor": "#34495E",
+      "hexColor": "#738cb4",
       "formalityRange": {
         "min": 55,
         "max": 85
@@ -223,7 +223,7 @@
     {
       "id": 21,
       "type": "lower wear",
-      "hexColor": "#34495E",
+      "hexColor": "#425e77",
       "formalityRange": {
         "min": 55,
         "max": 85
@@ -234,7 +234,7 @@
     {
       "id": 22,
       "type": "accessory",
-      "hexColor": "#C0392B",
+      "hexColor": "#392118",
       "formalityRange": {
         "min": 35,
         "max": 90
@@ -245,7 +245,7 @@
     {
       "id": 23,
       "type": "accessory",
-      "hexColor": "#C0392B",
+      "hexColor": "#94171c",
       "formalityRange": {
         "min": 35,
         "max": 90
