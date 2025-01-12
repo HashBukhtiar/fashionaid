@@ -6,17 +6,31 @@ import wardrobeData from '../wardrobe.json';
 
 function WardrobePage() {
   const [wardrobe, setWardrobe] = useState([]);
+  const [selectedItems, setSelectedItems] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     setWardrobe(wardrobeData.wardrobe);
   }, []);
 
+  const toggleSelectItem = (id) => {
+    setSelectedItems(prevSelectedItems =>
+      prevSelectedItems.includes(id)
+        ? prevSelectedItems.filter(item => item !== id)
+        : [...prevSelectedItems, id]
+    );
+  };
+
   const renderItems = (type) => {
     return wardrobe
       .filter(item => item.type === type)
       .map(item => (
-        <div key={item.id} className="WardrobePage-item">
+        <div
+          key={item.id}
+          className={`WardrobePage-item ${selectedItems.includes(item.id) ? 'selected' : ''}`}
+          onClick={() => toggleSelectItem(item.id)}
+        >
+          <div className="WardrobePage-select-circle"></div>
           <img src={item.imageUrl} alt={item.type} className="WardrobePage-item-image" />
           <div className="WardrobePage-color" style={{ backgroundColor: item.hexColor }}></div>
           <p>{item.hexColor}</p>
