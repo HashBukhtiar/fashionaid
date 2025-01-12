@@ -46,30 +46,38 @@ function WardrobePage() {
   };
 
   const renderItems = (type) => {
-    return wardrobe
-      .filter(item => item.type === type)
-      .map(item => (
-        <div
-          key={item.id}
-          className={`WardrobePage-item ${selectedItems.includes(item.id) ? 'selected' : ''}`}
-          onClick={() => toggleSelectItem(item.id)}
-        >
-          <div className="WardrobePage-select-circle"></div>
-          <img src={item.imageUrl} alt={item.type} className="WardrobePage-item-image" />
-          <div className="WardrobePage-color" style={{ backgroundColor: item.hexColor }}></div>
-          <p>{item.hexColor}</p>
-          <div className="WardrobePage-menu">
-            <FaEllipsisV onClick={(e) => { e.stopPropagation(); setMenuOpen(menuOpen === item.id ? null : item.id); }} />
-            {menuOpen === item.id && (
-              <div className="WardrobePage-menu-dropdown">
-                <button onClick={(e) => { e.stopPropagation(); removeItem(item.id); }}>
-                  <FaTrash style={{ marginRight: '8px' }} /> Remove Item
-                </button>
+    return (
+      <>
+        {wardrobe
+          .filter(item => item.type === type)
+          .map(item => (
+            <div
+              key={item.id}
+              className={`WardrobePage-item ${selectedItems.includes(item.id) ? 'selected' : ''}`}
+              onClick={() => toggleSelectItem(item.id)}
+            >
+              <div className="WardrobePage-select-circle"></div>
+              <img src={item.imageUrl} alt={item.type} className="WardrobePage-item-image" />
+              <div className="WardrobePage-color" style={{ backgroundColor: item.hexColor }}></div>
+              <p>{item.hexColor}</p>
+              <div className="WardrobePage-menu">
+                <FaEllipsisV onClick={(e) => { e.stopPropagation(); setMenuOpen(menuOpen === item.id ? null : item.id); }} />
+                {menuOpen === item.id && (
+                  <div className="WardrobePage-menu-dropdown">
+                    <button onClick={(e) => { e.stopPropagation(); removeItem(item.id); }}>
+                      <FaTrash style={{ marginRight: '8px' }} /> Remove Item
+                    </button>
+                  </div>
+                )}
               </div>
-            )}
-          </div>
+            </div>
+          ))}
+        <div className="WardrobePage-item WardrobePage-add-item" onClick={() => alert('Add new item')}>
+          <div className="WardrobePage-add-icon">+</div>
+          <div className="WardrobePage-add-text">Add wardrobe</div>
         </div>
-      ));
+      </>
+    );
   };
 
   return (
