@@ -26,3 +26,5 @@ CHOKIDAR_USEPOLLING=true
 WATCHPACK_POLLING=true
 
 __pycache__/
+
+.env
