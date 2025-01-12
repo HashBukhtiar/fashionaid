@@ -1,19 +1,21 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../styles/AIChatPage.css';
+import React, { useState, useRef, useEffect } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import "./AIChatPage.css";
 import logo from '../images/logo.png';
 
 const AIChatPage = () => {
   const [messages, setMessages] = useState([]);
-  const [userInput, setUserInput] = useState('');
+  const [userInput, setUserInput] = useState("");
   const [isChatBoxVisible, setIsChatBoxVisible] = useState(false);
   const navigate = useNavigate();
   const messagesEndRef = useRef(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   // Function to scroll to the bottom
   const scrollToBottom = () => {
     if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -30,26 +32,75 @@ const AIChatPage = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleSendMessage = () => {
-    if (!userInput.trim()) return;
-
-    const newMessage = { role: 'user', content: userInput, id: Date.now() };
-    setMessages((prevMessages) => [...prevMessages, newMessage]);
-    setUserInput('');
-
-    // Simulate AI response with a delay
-    setTimeout(() => {
-      const aiResponse = {
-        role: 'ai',
-        content: `Great question! Based on your wardrobe, I recommend pairing that with a navy blazer.`,
-        id: Date.now(),
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      // Process the selected file as needed
+      console.log("Selected file:", file);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        console.log("Base64 image:", typeof reader.result, reader.result);
+        setSelectedImage(reader.result);
       };
-      setMessages((prevMessages) => [...prevMessages, aiResponse]);
-    }, 1000);
+      reader.readAsDataURL(file);
+    }
   };
 
+  const triggerFileSelect = () => {
+    document.getElementById("hiddenFileInput").click();
+  };
+
+  const handleSendMessage = async () => {
+    if (!userInput.trim() && !selectedImage) return;
+  
+    const newMessage = {
+      role: "user",
+      content: userInput,
+      image: selectedImage,
+      id: Date.now(),
+    };
+    setMessages((prevMessages) => [...prevMessages, newMessage]);
+    setUserInput("");
+    setSelectedImage(null);
+  
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/send_message",
+        {
+          userInput,
+          selectedImage,
+        }
+      );
+  
+      const aiResponse = response.data.response;
+      const formattedContent = formatResponseContent(aiResponse.content);
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { role: "ai", content: formattedContent, id: Date.now() },
+      ]);
+    } catch (error) {
+      console.error("Error sending message to the backend:", error);
+    }
+  };
+  
+  const formatResponseContent = (content) => {
+    return content
+      .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") // Bold formatting
+      .replace(/\*/g, "<br>"); // Replace asterisks with line breaks
+  };
+
+  const renderFormattedContent = (content) => {
+    // Example formatting rules
+    const formattedContent = content.replace(
+      /\*\*(.*?)\*\*/g,
+      (match, text) => `<strong>${text}</strong>`
+    );
+    return <span dangerouslySetInnerHTML={{ __html: formattedContent }} />;
+  };
+  
+
   const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       handleSendMessage();
     }
   };
@@ -59,24 +110,29 @@ const AIChatPage = () => {
       <div className="header">
         <img src={logo} alt="Logo" className="logo" />
         <h1>AI Stylist Chat</h1>
-        <button className="wardrobe-button" onClick={() => navigate('/wardrobe')}>
+        <button
+          className="wardrobe-button"
+          onClick={() => navigate("/wardrobe")}
+        >
           Wardrobe
         </button>
       </div>
       {isChatBoxVisible && (
-        <div className="chat-box animate"> {/* Added animate class */}
+        <div className="chat-box animate">
           <div className="messages">
             {messages.map((msg) => (
-              <div
-                key={msg.id}
-                className={`message ${msg.role} enter`} // Added the "enter" class for animation
-              >
-                {msg.content}
+              <div key={msg.id} className={`message ${msg.role} enter`}>
+                {msg.image && (
+                  <img src={msg.image} alt="Sent" className="sent-image" />
+                )}
+                <span dangerouslySetInnerHTML={{ __html: msg.content }} />
               </div>
             ))}
-            {/* Reference to ensure scrolling to the last message */}
             <div ref={messagesEndRef} />
           </div>
+          {selectedImage && (
+            <img src={selectedImage} alt="Selected" className="image-preview" />
+          )}
           <div className="input-container">
             <input
               type="text"
@@ -86,6 +142,14 @@ const AIChatPage = () => {
               placeholder="Ask a question..."
             />
             <button onClick={handleSendMessage}>Send</button>
+            <button onClick={triggerFileSelect}>Select Picture</button>
+            <input
+              type="file"
+              id="hiddenFileInput"
+              style={{ display: "none" }}
+              accept="image/*"
+              onChange={handleFileChange}
+            />
           </div>
         </div>
       )}

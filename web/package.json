@@ -6,6 +6,8 @@
     "@google-cloud/vertexai": "^1.9.2",
     "@google-cloud/vision": "^4.3.2",
     "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
     "cra-template": "1.2.0",
     "express": "^4.21.2",
     "fs": "^0.0.1-security",
