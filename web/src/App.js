@@ -5,6 +5,7 @@ import './App.css';
 import AIChatPage from './pages/AIChatPage';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
+import WardrobePage from './pages/WardrobePage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/chat" element={<AIChatPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/wardrobe" element={<WardrobePage />} />
         </Routes>
       </div>
     </Router>
