@@ -2,17 +2,17 @@
   "wardrobe": [
     {
       "id": 1,
-      "type": "sweater",
+      "type": "upper wear",
       "hexColor": "#4A90E2",
       "formalityRange": {
         "min": 30,
         "max": 70
       },
-      "imageUrl": "https://d2bzx2vuetkzse.cloudfront.net/unshoppable_producs/0b767813-d2fe-469c-bb04-97b5e2537f61.png"
+      "imageUrl": "https://static.vecteezy.com/system/resources/thumbnails/022/206/207/small/black-sweatshirt-isolated-cut-out-png.png"
     },
     {
       "id": 2,
-      "type": "pants",
+      "type": "lower wear",
       "hexColor": "#2C3E50",
       "formalityRange": {
         "min": 50,
@@ -32,17 +32,17 @@
     },
     {
       "id": 4,
-      "type": "sweater",
+      "type": "upper wear",
       "hexColor": "#A8A9AD",
       "formalityRange": {
         "min": 20,
         "max": 50
       },
-      "imageUrl": "https://example.com/images/sweater2.png"
+      "imageUrl": "https://img.pikbest.com/png-images/20240712/mockup-blank-flat-blue-hoodie_10664614.png!sw800"
     },
     {
       "id": 5,
-      "type": "pants",
+      "type": "lower wear",
       "hexColor": "#8E44AD",
       "formalityRange": {
         "min": 60,
@@ -62,17 +62,87 @@
     },
     {
       "id": 7,
-      "type": "sweater",
+      "type": "upper wear",
       "hexColor": "#FF5733",
       "formalityRange": {
         "min": 25,
         "max": 60
       },
-      "imageUrl": "https://example.com/images/sweater3.png"
+      "imageUrl": "https://static.vecteezy.com/system/resources/thumbnails/035/438/705/small/ai-generated-black-hoodie-isolated-on-transparent-background-free-png.png"
+    },
+    {
+        "id": 12,
+        "type": "upper wear",
+        "hexColor": "#FF5733",
+        "formalityRange": {
+          "min": 25,
+          "max": 60
+        },
+        "imageUrl": "https://www.pngarts.com/files/11/Hoodie-PNG-High-Quality-Image.png"
+    },
+    {
+        "id": 12,
+        "type": "upper wear",
+        "hexColor": "#FF5733",
+        "formalityRange": {
+          "min": 25,
+          "max": 60
+        },
+        "imageUrl": "https://pngimg.com/d/hoodie_PNG23.png"
+    },
+    {
+        "id": 12,
+        "type": "upper wear",
+        "hexColor": "#FF5733",
+        "formalityRange": {
+          "min": 25,
+          "max": 60
+        },
+        "imageUrl": "https://www.createashirt.com/image/catalog/products/2200/Back/Ultra-Cotton-Tank-Top-2200_Orange.png"
+    },
+    {
+        "id": 12,
+        "type": "upper wear",
+        "hexColor": "#FF5733",
+        "formalityRange": {
+          "min": 25,
+          "max": 60
+        },
+        "imageUrl": "https://png.pngtree.com/png-clipart/20230820/ourmid/pngtree-formal-suit-for-passport-png-image_9189045.png"
+    },
+    {
+        "id": 12,
+        "type": "upper wear",
+        "hexColor": "#FF5733",
+        "formalityRange": {
+          "min": 25,
+          "max": 60
+        },
+        "imageUrl": "https://pics.clipartpng.com/Sky_Blue_T_Shirt_PNG_Clip_Art-3103.png"
+    },
+    {
+        "id": 12,
+        "type": "upper wear",
+        "hexColor": "#FF5733",
+        "formalityRange": {
+          "min": 25,
+          "max": 60
+        },
+        "imageUrl": "https://purepng.com/public/uploads/large/purepng.com-t-shirtt-shirtfabrict-shapegramnets-1421526429337ircsl.png"
+    },
+    {
+        "id": 12,
+        "type": "upper wear",
+        "hexColor": "#FF5733",
+        "formalityRange": {
+          "min": 25,
+          "max": 60
+        },
+        "imageUrl": "https://static.vecteezy.com/system/resources/thumbnails/041/290/593/small/ai-generated-short-sleeves-black-tshirt-isolated-on-a-transparent-background-free-png.png"
     },
     {
       "id": 8,
-      "type": "pants",
+      "type": "lower wear",
       "hexColor": "#34495E",
       "formalityRange": {
         "min": 55,

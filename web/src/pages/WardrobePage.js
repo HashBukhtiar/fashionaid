@@ -15,7 +15,8 @@ function WardrobePage() {
       .map(item => (
         <div key={item.id} className="WardrobePage-item">
           <img src={item.imageUrl} alt={item.type} className="WardrobePage-item-image" />
-          <p>{item.type.charAt(0).toUpperCase() + item.type.slice(1)}</p>
+          <div className="WardrobePage-color" style={{ backgroundColor: item.hexColor }}></div>
+          <p>{item.hexColor}</p>
         </div>
       ));
   };
@@ -32,15 +33,15 @@ function WardrobePage() {
         </div>
       </section>
       <section className="WardrobePage-section">
-        <h2>Sweaters</h2>
+        <h2>Upper Wear</h2>
         <div className="WardrobePage-items">
-          {renderItems('sweater')}
+          {renderItems('upper wear')}
         </div>
       </section>
       <section className="WardrobePage-section">
-        <h2>Pants</h2>
+        <h2>Lower Wear</h2>
         <div className="WardrobePage-items">
-          {renderItems('pants')}
+          {renderItems('lower wear')}
         </div>
       </section>
     </div>
