@@ -3,7 +3,7 @@
     {
       "id": 1,
       "type": "upper wear",
-      "hexColor": "#4A90E2",
+      "hexColor": "#1f1f1e",
       "formalityRange": {
         "min": 30,
         "max": 70
@@ -36,7 +36,7 @@
     {
       "id": 4,
       "type": "upper wear",
-      "hexColor": "#100f0b",
+      "hexColor": "#1b78b8",
       "formalityRange": {
         "min": 20,
         "max": 50
@@ -69,7 +69,7 @@
     {
       "id": 7,
       "type": "upper wear",
-      "hexColor": "#FF5733",
+      "hexColor": "#212120",
       "formalityRange": {
         "min": 25,
         "max": 60
@@ -80,7 +80,7 @@
     {
       "id": 8,
       "type": "upper wear",
-      "hexColor": "#FF5733",
+      "hexColor": "#b92c36",
       "formalityRange": {
         "min": 25,
         "max": 60
@@ -91,7 +91,7 @@
     {
       "id": 9,
       "type": "upper wear",
-      "hexColor": "#FF5733",
+      "hexColor": "#f8c4db",
       "formalityRange": {
         "min": 25,
         "max": 60
@@ -102,7 +102,7 @@
     {
       "id": 10,
       "type": "upper wear",
-      "hexColor": "#FF5733",
+      "hexColor": "#d9481f",
       "formalityRange": {
         "min": 25,
         "max": 60
@@ -113,7 +113,7 @@
     {
       "id": 11,
       "type": "upper wear",
-      "hexColor": "#FF5733",
+      "hexColor": "#1a1a1a",
       "formalityRange": {
         "min": 25,
         "max": 60
@@ -124,7 +124,7 @@
     {
       "id": 12,
       "type": "upper wear",
-      "hexColor": "#FF5733",
+      "hexColor": "#29c6d7",
       "formalityRange": {
         "min": 25,
         "max": 60
@@ -135,7 +135,7 @@
     {
       "id": 13,
       "type": "upper wear",
-      "hexColor": "#FF5733",
+      "hexColor": "#abafbc",
       "formalityRange": {
         "min": 25,
         "max": 60
@@ -146,7 +146,7 @@
     {
       "id": 14,
       "type": "upper wear",
-      "hexColor": "#FF5733",
+      "hexColor": "#171717",
       "formalityRange": {
         "min": 25,
         "max": 60
