@@ -110,7 +110,7 @@ const AIChatPage = () => {
     <div className="chat-page">
       <div className="header">
         <img src={logo} alt="Logo" className="logo" />
-        <h1>AI Stylist Chat</h1>
+        <h1>LooksmaxxerAI Chat</h1>
         <button
           className="wardrobe-button"
           onClick={() => navigate("/wardrobe")}

@@ -1,4 +1,4 @@
-# Looksmaxxer
+# LooksmaxxerAI
 
 **Effortlessly enhance your style and build connections through fashion.**  
 Looksmaxxer combines the power of Vertex AI and advanced algorithms to analyze your wardrobe and recommend visually appealing outfits, elevating your style and confidence.
