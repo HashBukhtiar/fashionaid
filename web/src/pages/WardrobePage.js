@@ -16,6 +16,19 @@ function WardrobePage() {
     setSelectedItems(savedWardrobe.filter(item => item.active).map(item => item.id));
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest('.WardrobePage-menu')) {
+        setMenuOpen(null);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
   const toggleSelectItem = (id) => {
     const updatedWardrobe = wardrobe.map(item =>
       item.id === id ? { ...item, active: !item.active } : item
