@@ -37,18 +37,18 @@ body {
 }
 
 .wardrobe-button {
-  /*background-color: #ffffff;*/
   background: linear-gradient(135deg, #6e2c8e, #1f4b70, #1b7a4e, #b3740a, #9a3a00);
+  background-size: 400% 400%;
   animation: gradientAnimation 20s ease infinite;
-  color: #000000;
   border: none;
+  color: white;
   padding: 10px 20px;
-  font-size: 14px;
-  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: sans-serif;
-  font-weight: bold;
+  border-radius: 5px;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+  margin-right: 5px;
 }
 
 .wardrobe-button:hover {
@@ -238,7 +238,7 @@ button:hover {
 .logo {
   width: 50px;
   height: auto;
-  margin-right: 10px;
+  margin-left: 8px;
 }
 
 .paperclip-icon {
