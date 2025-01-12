@@ -37,7 +37,7 @@ const AIChatPage = () => {
       console.log('Selected file:', file);
       const reader = new FileReader();
       reader.onloadend = () => {
-        console.log('Base64 image:', reader.result);
+        console.log('Base64 image:', typeof(reader.result), reader.result);
         setSelectedImage(reader.result);
       };
       reader.readAsDataURL(file);
