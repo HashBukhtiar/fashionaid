@@ -170,8 +170,10 @@ function WardrobePage() {
               value={newItemImageUrl}
               onChange={(e) => setNewItemImageUrl(e.target.value)}
             />
-            <button onClick={handleSaveNewItem}>Save</button>
-            <button onClick={() => setShowAddPopup(false)}>Cancel</button>
+            <div style={{ display: 'flex', gap: '10px' }}>
+              <button onClick={handleSaveNewItem}>Save</button>
+              <button onClick={() => setShowAddPopup(false)}>Cancel</button>
+            </div>
           </div>
         </div>
       )}
