@@ -37,7 +37,9 @@ body {
 }
 
 .wardrobe-button {
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
+  background: linear-gradient(135deg, #6e2c8e, #1f4b70, #1b7a4e, #b3740a, #9a3a00);
+  animation: gradientAnimation 20s ease infinite;
   color: #000000;
   border: none;
   padding: 10px 20px;
@@ -45,6 +47,8 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
 .wardrobe-button:hover {

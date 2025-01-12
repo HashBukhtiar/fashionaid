@@ -142,10 +142,10 @@ const AIChatPage = () => {
               onKeyDown={handleKeyDown}
               placeholder="Ask a question..."
             />
-            <button onClick={handleSendMessage}>Send</button>
             <button onClick={triggerFileSelect}>
               <img src={paperclip} alt="Upload" className="paperclip-icon" />
             </button>
+            <button onClick={handleSendMessage}>Send</button>
             <input
               type="file"
               id="hiddenFileInput"
