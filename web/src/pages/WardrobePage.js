@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { FaHome, FaComments } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import '../styles/WardrobePage.css';
-import wardrobeData from '../../public/wardrobe.json';
 
 function WardrobePage() {
   const [wardrobe, setWardrobe] = useState([]);
@@ -10,16 +9,30 @@ function WardrobePage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setWardrobe(wardrobeData.wardrobe);
-    // setSelectedItems(wardrobeData.wardrobe.map(item => item.id));
+    fetch('/wardrobe.json')
+      .then(response => response.json())
+      .then(data => {
+        setWardrobe(data.wardrobe);
+        setSelectedItems(data.wardrobe.filter(item => item.active).map(item => item.id));
+      })
+      .catch(error => console.error('Error fetching wardrobe data:', error));
   }, []);
 
   const toggleSelectItem = (id) => {
-    setSelectedItems(prevSelectedItems =>
-      prevSelectedItems.includes(id)
-        ? prevSelectedItems.filter(item => item !== id)
-        : [...prevSelectedItems, id]
+    const updatedWardrobe = wardrobe.map(item =>
+      item.id === id ? { ...item, active: !item.active } : item
     );
+    setWardrobe(updatedWardrobe);
+    setSelectedItems(updatedWardrobe.filter(item => item.active).map(item => item.id));
+
+    // Update the JSON file
+    fetch('/wardrobe.json', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ wardrobe: updatedWardrobe })
+    }).catch(error => console.error('Error updating wardrobe data:', error));
   };
 
   const renderItems = (type) => {
