@@ -1,15 +1,20 @@
 # FashionAId
 
+Hashim Bukhtiar
+Andrew De Rango
+Ahsan Muzammil
+Nehad Shikh Trab
+
 **Effortlessly enhance your style and build connections through fashion.**  
-Looksmaxxer combines the power of Vertex AI and advanced algorithms to analyze your wardrobe and recommend visually appealing outfits, elevating your style and confidence.
+FashionAId combines the power of Vertex AI and advanced algorithms to analyze your wardrobe and recommend visually appealing outfits, elevating your style and confidence.
 
 ## About the Project
 
 ### Inspiration
-The motivation behind Looksmaxxer stems from the desire to simplify the art of dressing well while improving self-confidence and mental health. Many individuals struggle with putting together stylish outfits due to a lack of understanding of color theory or trends. Looksmaxxer provides an AI-powered solution that enables anyone to unlock their fashion potential effortlessly.
+The motivation behind FashionAId stems from the desire to simplify the art of dressing well while improving self-confidence and mental health. Many individuals struggle with putting together stylish outfits due to a lack of understanding of color theory or trends. FashionAId provides an AI-powered solution that enables anyone to unlock their fashion potential effortlessly.
 
 ### What It Does
-Looksmaxxer allows users to:
+FashionAId allows users to:
 - Upload images of clothing items or full outfits for analysis.
 - Receive AI-generated suggestions for outfit improvements, focusing on ideal color combinations from their wardrobe.
 - Add and organize items in a digital wardrobe through intuitive tabs for upper wear, bottom wear, and accessories.
@@ -51,7 +56,7 @@ Looksmaxxer allows users to:
 - **Tech Stack Synergy:** Learned how to integrate React.js, Express.js, Flask, and Firebase into a cohesive system.
 - **Secure Web Applications:** Understood the importance of secure authentication and user management in modern web development.
 
-## What's Next for Looksmaxxer
+## What's Next for FashionAId
 1. **Style Trend Analysis:** Incorporate real-time trend analysis to recommend outfits aligned with current fashion.
 2. **Community Platform:** Build a feature for users to share their outfits and get feedback from others.
 3. **Personalized Recommendations:** Add machine learning to tailor suggestions based on user preferences and history.
