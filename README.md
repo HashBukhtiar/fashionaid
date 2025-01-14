@@ -1,9 +1,6 @@
 # FashionAId
 
-Hashim Bukhtiar
-Andrew De Rango
-Ahsan Muzammil
-Nehad Shikh Trab
+Hashim Bukhtiar | Andrew De Rango | Ahsan Muzammil | Nehad Shikh Trab
 
 **Effortlessly enhance your style and build connections through fashion.**  
 FashionAId combines the power of Vertex AI and advanced algorithms to analyze your wardrobe and recommend visually appealing outfits, elevating your style and confidence.
