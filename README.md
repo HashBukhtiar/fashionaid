@@ -68,4 +68,4 @@ FashionAId allows users to:
 - **APIs:** Firebase, Vertex AI
 
 ## Video Demo
-[Watch the Demo](#)
+[Watch the Demo](https://youtu.be/EuvxMWCvvPM)
